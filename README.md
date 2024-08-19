@@ -32,3 +32,49 @@ add FIXME:
 2. val/train/test results
 3. graphs
 
+## File Overview
+
+| Directory | File | Usage |
+|-----------|------|---------|
+| . | README.md | this file
+| . | requirements.txt | pip install requirements file | 
+| . | Phishing_Email.csv | Kaggle email database |
+| research | project.ipynb | notebook interface for running project |
+| research | project_raw.ipynb | our process of developing the project |
+| src | utils.py | APIs for classifying and preprocessing emails |
+
+
+## Steps to Set Up the Project
+
+### Installation Commands From Command Line
+
+| Step                      | Command                                                |
+|---------------------------|--------------------------------------------------------|
+| Install `torchdata`        | `pip install torchdata`                                |
+| Install `portalocker`      | `pip install portalocker`                              |
+| Install `kaggle`           | `pip install kaggle`                                   |
+| Set up `kaggle.json`       | `mkdir -p ~/.kaggle` <br> `cp kaggle.json ~/.kaggle/` <br> `chmod 600 ~/.kaggle/kaggle.json` |
+| Download dataset           | `kaggle datasets download -d subhajournal/phishingemails` |
+| Install `bertviz`          | `pip install bertviz`                                  |
+| Install `jupyterlab`      | `pip install jupyterlab`                               |
+| Install `ipywidgets`      | `pip install ipywidgets`                               |
+| Unzip dataset              | `unzip /content/phishingemails.zip`                    |
+
+
+## Libraries and Versions
+
+| Library                                    | Version   |
+|--------------------------------------------|-----------|
+| `numpy`                                    | `1.25.0`  |
+| `pandas`                                   | `2.1.0`   |
+| `matplotlib`                               | `3.7.2`   |
+| `torch`                                    | `2.0.1`   |
+| `scikit-learn`                             | `1.2.2`   |
+| `transformers`                             | `4.31.0`  |
+| `torchtext`                                | `0.16.0`  |
+| `bertviz`                                  | `1.4.0`   |
+
+
+FIXME:
+
+- sources
