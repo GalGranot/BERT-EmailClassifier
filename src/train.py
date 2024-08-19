@@ -65,3 +65,28 @@ def epoch_time(start_time, end_time):
     elapsed_mins = int(elapsed_time / 60)
     elapsed_secs = int(elapsed_time - (elapsed_mins * 60))
     return elapsed_mins, elapsed_secs
+
+
+def test(model, test_dataloader, device):
+    outputs = []
+    correct = 0
+    total = 0
+
+    model.eval()
+    with torch.no_grad():
+        for k, (mb_x, mb_m, mb_y) in enumerate(test_dataloader):
+            mb_x = mb_x.to(device)
+            mb_m = mb_m.to(device)
+            mb_y = mb_y.to(device)
+
+            output = model(mb_x, attention_mask=mb_m)
+            logits = output.logits
+            _, predicted = torch.max(logits, dim=1)
+
+            outputs.append(predicted.cpu())
+
+            correct += (predicted == mb_y).sum().item()
+            total += mb_y.size(0)
+
+    accuracy = correct / total
+    return outputs, accuracy
