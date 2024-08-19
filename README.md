@@ -20,19 +20,38 @@ We've used [this Kaggle database](https://www.kaggle.com/datasets/naserabdullaha
 
 ## Background and Results
 
-Attention visualization:
+ Our model achieved an accuracy rate of 98% on the test dataset, in addition to highlighting critical words that contributed to the model’s decision-making process. We've also visualized the attention mechanism using [BertViz](https://github.com/jessevig/bertviz).
+
+### Attention visualization:
+
 <div align="center">
 <img src="images/purple.png" alt="Attention visualization" width="550"/>
-</div>
-<div align="center">
+
 <img src="images/yellow.png" alt="Attention visualization" width="550"/>
-</div>
-<div align="center">
+
 <img src="images/red.png" alt="Attention visualization" width="550"/>
-</div>
-<div align="center">
+
+
 <img src="images/green.png" alt="Attention visualization" width="550"/>
 </div>
+
+### Training & Validation Loss:
+<div align="center">
+  
+<img src="images/loss.jpeg" alt="Attention visualization" width="800"/>
+
+</div>
+
+## Confusion Matrices:
+
+<div align="center">
+  
+<img src="images/conf1.jpeg" alt="Attention visualization" width="550"/>
+
+<img src="images/conf2.jpeg" alt="Attention visualization" width="550"/>
+
+</div>
+
 
 ## How to run
 
