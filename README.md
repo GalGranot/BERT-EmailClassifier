@@ -98,6 +98,7 @@ print(classify_email(email))
 | research | project.ipynb | notebook interface for running project |
 | research | project_raw.ipynb | our process of developing the project |
 | src | utils.py | APIs for classifying and preprocessing emails |
+| src | train.py | training model functions |
 
 
 ## Steps to Set Up the Project
