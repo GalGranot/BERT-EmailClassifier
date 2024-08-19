@@ -29,7 +29,7 @@ This repository contains for an email proccessing Transformer, based on the Bidi
 
 This project was written as part of the [Technion's ECE Deep Learning course (046211)](https://taldatech.github.io/ee046211-deep-learning/).
 
- [A short video summarizing the project can be found here](https://youtu.be/XAmi-xOUZUc).
+ A short video summarizing the project can be found [here](https://youtu.be/XAmi-xOUZUc).
 
 We've used [this Kaggle database](https://www.kaggle.com/datasets/naserabdullahalam/phishing-email-dataset) as a baseline for performance - it contains 82k emails with roughly equal amounts of legitimate and phishing/spam emails.
 
