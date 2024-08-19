@@ -64,7 +64,7 @@ def count_parameters(model):
 def check_model_dir():
     out_dir = '../model'
     if not os.path.exists(out_dir):
-        print("path to model does not exist, please reclone repository"
+        print("path to model does not exist, please reclone repository")
         exit(1)
     
 def get_top_tokens_from_text(text, tokenizer, model, device, top_k=5):
