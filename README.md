@@ -99,6 +99,7 @@ print(classify_email(email))
 | research | project_raw.ipynb | our process of developing the project |
 | src | utils.py | APIs for classifying and preprocessing emails |
 | src | train.py | training model functions |
+| model | . | model contents |
 
 
 ## Steps to Set Up the Project
