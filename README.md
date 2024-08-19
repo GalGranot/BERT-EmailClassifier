@@ -17,9 +17,22 @@ This project was written as part of the [Technion's ECE Deep Learning course (04
 
 We've used [this Kaggle database](https://www.kaggle.com/datasets/naserabdullahalam/phishing-email-dataset) as a baseline for performance - it contains 82k emails with roughly equal amounts of legitimate and phishing/spam emails.
 
-A short video summarizing the project can be found here - FIXME
 
-FIXME - maybe add highlighting important passages?
+## Background and Results
+
+Attention visualization:
+<div align="center">
+<img src="images/purple.png" alt="Attention visualization" width="550"/>
+</div>
+<div align="center">
+<img src="images/yellow.png" alt="Attention visualization" width="550"/>
+</div>
+<div align="center">
+<img src="images/red.png" alt="Attention visualization" width="550"/>
+</div>
+<div align="center">
+<img src="images/green.png" alt="Attention visualization" width="550"/>
+</div>
 
 ## How to run
 
@@ -78,3 +91,9 @@ add FIXME:
 FIXME:
 
 - sources
+- report
+
+- A short video summarizing the project can be found here - FIXME
+
+FIXME - maybe add highlighting important passages?
+
