@@ -98,7 +98,8 @@ print(classify_email(email))
 |-----------|------|---------|
 | . | README.md | this file
 | . | requirements.txt | pip install requirements file | 
-| . | Phishing_Email.csv | Kaggle email database |
+| . | BERT Email Classifier.pdf | project report and details |
+| . | BERT Email Classifier Presentation.pdf | project presentation
 | research | project.ipynb | notebook interface for running project |
 | research | project_raw.ipynb | our process of developing the project |
 | src | utils.py | APIs for classifying and preprocessing emails |
