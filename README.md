@@ -4,9 +4,9 @@
 
 ## Final Project for Technion's ECE Deep Learning Course (046211)
 
-Gal Granot: [LinkedIn](https://www.linkedin.com/in/gal-granot/), [GitHub](https://github.com/GalGranot)
+**Gal Granot**: [LinkedIn](https://www.linkedin.com/in/gal-granot/), [GitHub](https://github.com/GalGranot)
 
-Nir Tevet: [LinkedIn](https://www.linkedin.com/in/nir-tevet-355b28229/), [GitHub](https://github.com/nirtevet)
+**Nir Tevet**: [LinkedIn](https://www.linkedin.com/in/nir-tevet-355b28229/), [GitHub](https://github.com/nirtevet)
 
 </div>
 
@@ -25,7 +25,7 @@ from src.utils import (
 ```
 
 ## Introduction
-This repository contains for an email proccessing Transformer, based on the Bidirectional Encoder Representations from Transformers (BERT) language model. The model, based on the attention architecture, attempts to classify legitimate emails from malicious phishing attempts, and can be used as an additional layer of protection against these types of attacks.
+This repository contains an email proccessing transformer, based on the Bidirectional Encoder Representations from Transformers (BERT) language model. The model, based on the attention architecture, attempts to classify legitimate emails from malicious phishing attempts, and can be used as an additional layer of protection against these types of attacks.
 
 This project was written as part of the [Technion's ECE Deep Learning course (046211)](https://taldatech.github.io/ee046211-deep-learning/).
 
@@ -37,17 +37,19 @@ We've used [this Kaggle database](https://www.kaggle.com/datasets/naserabdullaha
 
 The goal of this project is to develop an effective deep learning model for phishing email detection. By leveraging transformer models, we aim to accurately classify emails and highlight key words that contribute most to the classification decision.
 
-Phishing attacks continue to be a significant cybersecurity threat, targeting both individuals and organizations. Traditional rule-based systems often are not enough to defend the average email user from the evolving nature of phishing techniques. Machine learning models, particularly large language models based on transformers, offer a promising solution due to their ability to capture contextual information in text. Furthermore, enhancing model explainability and providing transparency into the decision-making process as seen by the user is crucial for gaining the latter’s trust and ensuring that the model's decisions can be validated.
+Phishing attacks continue to be a significant cybersecurity threat, targeting both individuals and organizations. Traditional rule-based systems often are not enough to defend the average email user from the evolving nature of phishing techniques, as well as provide semantic context to the user. Machine learning models, particularly large language models based on transformers, offer a promising solution due to their ability to capture contextual information in text. Furthermore, enhancing model explainability and providing transparency into the decision-making process as seen by the user is crucial for gaining the latter’s trust and ensuring that the model's decisions can be validated.
 
-We employed a pretrained BERT model for our phishing detection task. BERT is a transformer-based model designed to capture deep bidirectional context of each token by jointly conditioning on both left and right context in all layers. This enables BERT to capture rich contextual information, making it ideal for text classification tasks.
+We fine-tuned a pre-trained BERT model for our phishing detection task. BERT is a transformer-based model designed to capture deep bidirectional context of each token by jointly conditioning on both left and right context in all layers. This enables BERT to capture rich contextual information, making it ideal for text classification tasks.
 
 Our workflow consisted of using the pre-trained BERT model with an added classification layer and training it (while maintaining some weights as no-decay) on the email database. After conducting the hyperparameter search, we trained the optimized model on the dataset, validated it during training using the validation set, while trying not to overfit the model in order to improve generalization.
 
 ## Results
 
- Our model achieved an accuracy rate of 98% on the test dataset, in addition to highlighting critical words that contributed to the model’s decision-making process. We've also visualized the attention mechanism using [BertViz](https://github.com/jessevig/bertviz).
+ Our model achieved an accuracy rate of 98% on the test dataset, in addition to highlighting critical words that contributed to the model’s decision-making process.
 
 ### Attention visualization:
+
+ We've also visualized the attention mechanism using [BertViz](https://github.com/jessevig/bertviz). In this tool the strength of the semantic connection between tokens is visualized as lines betweens tokens, with stronger lines indicating stronger connections. We've used this a visual aid to the user in providing explainability of the model's decisions.
 
 <div align="center">
 <img src="images/purple.png" alt="Attention visualization" width="550"/>
@@ -101,7 +103,7 @@ print(classify_email(email))
 | research | project_raw.ipynb | our process of developing the project |
 | src | utils.py | APIs for classifying and preprocessing emails |
 | src | train.py | training model functions |
-| model | . | model contents |
+| model | . | trained model weights and parameters |
 
 
 ## Steps to Set Up the Project
@@ -143,11 +145,4 @@ This paper introduces the Transformer architecture, which serves as the foundati
 This paper describes the BERT model used in our project for text classification tasks.
 
 •	[Kaggle Phishing Emails Dataset](https://www.kaggle.com/katyalp/phishing-emails)
-
-
-FIXME:
-
-- sources
-- report
-
 
